@@ -39,8 +39,11 @@ class _BallState extends State<Ball> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => setState(() => ballNumber = 1 + Random().nextInt(5)),
+      onTap: _changeBallNumber,
       child: Center(child: Image.asset('assets/images/ball$ballNumber.png')),
     );
   }
+
+  void _changeBallNumber() =>
+      setState(() => ballNumber = 1 + Random().nextInt(5));
 }
