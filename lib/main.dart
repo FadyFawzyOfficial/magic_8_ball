@@ -34,6 +34,10 @@ class Ball extends StatefulWidget {
 
 class _BallState extends State<Ball> {
   @override
-  Widget build(BuildContext context) =>
-      Center(child: Image.asset('assets/images/ball1.png'));
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () => debugPrint('I got clicked!'),
+      child: Center(child: Image.asset('assets/images/ball1.png')),
+    );
+  }
 }
